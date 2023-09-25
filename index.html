@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Inventory - Lesmy Perez</title>
+    <!-- CSS custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- browser tab icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="css/alien-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="css/alien-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="css/alien-icon/favicon-16x16.png">
+    <link rel="manifest" href="css/alien-icon/site.webmanifest">
+
+</head>
+<body>
+    <nav>
+        <a href="/dynamic">Go back to Dynamic page</a>
+    </nav>
+
+    <section class="info">
+        <div class="container">
+            <h1>Resource Inventory</h1>
+            <p>a place to share and find student resources</p>
+        </div>
+    </section>
+
+
+    
+    <section class="content"> 
+        <div class="container">
+            <h2>Add/Edit Resource</h2>
+            <form id="resourceForm" method="POST">
+                
+                <input type="hidden" id="resource_id" value="">
+                <label for="resource_name">Name of the resource</label>
+                <input type="text" name ="resourceName" id="resource_name" placeholder="Name of the resource" required>
+                <br>
+                <a href="#" id="linkPreview" target="_blank"></a>
+                <label for="resource_link">Link</label><br>
+                <input type="text" name ="resourceLink" id="resource_link" placeholder="Link" required>
+                
+                <label for="resource_type">Resource Type</label>
+                <input type="text" name = "resourceType" id="resource_type" placeholder="e.g. CSS, images, design templates etc" required>
+
+                <!-- <label id="resource_type" for="id="resource_type""></label> -->
+                <!-- <select class="" name="resourceType">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select> -->
+
+                <label for="resource_description">Description</label>
+                <textarea name = "resourceDescription" id="resource_description" placeholder="write a brief description about the resource"></textarea>
+
+                <label for="resource_keyword">Keywords</label>
+                <input type="text" name = "resourceKeyword" id="resource_keyword" placeholder="Type 1-3 keywords here e.g. CSS, Javascript, Libraries..." required>
+                <button type="submit" id="submit">Add my resource to the list</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- <section id="search">
+        <div class="container">
+            <h2>Search Resources</h2>
+            <input type="text" name = "searchKeyword" id="search_keyword" placeholder="Search by Keyword">
+            <button id="search_button">Search</button>
+        </div>
+    </section> -->
+
+    <section class="content">
+        <div class="table" id="display">
+            <!-- Resources will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <nav>
+            <a href="../">go back</a>
+            <a href="/">home</a>
+            <a href="https://nortonb.web582.com/" target="_blank">class</a>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
